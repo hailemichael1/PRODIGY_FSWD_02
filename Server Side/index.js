@@ -4,7 +4,7 @@ import { adminRouter } from "./Routes/AdminRoute.js";
 import { EmployeeRouter } from "./Routes/EmployeeRoute.js";
 import Jwt from "jsonwebtoken";
 import cookieParser from "cookie-parser";
-
+import { SchemaRouter } from "./Routes/schemaRouter.js";
 const app = express();
 app.use(
   cors({
@@ -17,6 +17,7 @@ app.use(express.json());
 app.use(cookieParser());
 app.use("/auth", adminRouter);
 app.use("/employee", EmployeeRouter);
+app.use(SchemaRouter);
 app.use(express.static("Public"));
 
 const verifyUser = (req, res, next) => {

@@ -49,12 +49,6 @@ const Dashboard = () => {
                   <span className="ms-2 d-none d-sm-inline">Category</span>
                 </Link>
               </li>
-              <li className="w-100">
-                <Link to="/dashboard/profile" className="nav-link text-white px-0 align-middle">
-                  <i className="fs-4 bi-person ms-2"></i>
-                  <span className="ms-2 d-none d-sm-inline">Profile</span>
-                </Link>
-              </li>
               <li className="w-100" onClick={handleLogout}>
                 <Link className="nav-link text-white px-0 align-middle">
                   <i className="fs-4 bi-power ms-2"></i>
